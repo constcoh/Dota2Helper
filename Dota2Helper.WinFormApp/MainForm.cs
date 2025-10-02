@@ -1,11 +1,14 @@
 using Dota2Helper.WinFormApp.InputControllers;
 using Dota2Helper.WinFormApp.ViewModelObservers;
+using SharpHook;
 using System.Drawing.Imaging;
 
 namespace Dota2Helper.WinFormApp
 {
     public partial class MainForm : Form
     {
+        private TaskPoolGlobalHook _hook = new TaskPoolGlobalHook();
+
         public MainForm()
         {
             InitializeComponent();
@@ -33,7 +36,7 @@ namespace Dota2Helper.WinFormApp
 
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private async void MainForm_Load(object sender, EventArgs e)
         {
             RootViewModel.Init();
 
@@ -49,7 +52,11 @@ namespace Dota2Helper.WinFormApp
                     numericUpDownBottom),
                 new MapEnlagerCopyAreaObserver(
                     RootViewModel.Instance.MapEnlargerModel,
-                    pnlDisplay)
+                    pnlDisplay),
+                new HerosStatisticsCopyAreaObserver(
+                    RootViewModel.Instance.HerosStatisticsModel,
+                    pnlPlayers,
+                    lblScreenDelayValue)
             });
 
             RootViewModel.Instance.AddRange(new List<IInputController>
@@ -61,13 +68,23 @@ namespace Dota2Helper.WinFormApp
                     numericUpDownLeft,
                     numericUpDownTop,
                     numericUpDownRight,
-                    numericUpDownBottom)
+                    numericUpDownBottom),
+                new HerosStatisticsController(
+                    RootViewModel.Instance.HerosStatisticsModel,
+                    _hook)
             });
+
+            await _hook.RunAsync();
         }
 
         private void tmrUI_Tick(object sender, EventArgs e)
         {
             RootViewModel.Instance.UpdateView();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

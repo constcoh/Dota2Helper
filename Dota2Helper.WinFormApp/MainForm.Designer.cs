@@ -43,6 +43,9 @@
             numericUpDownScreen = new NumericUpDown();
             label1 = new Label();
             tmrUI = new System.Windows.Forms.Timer(components);
+            pnlPlayers = new Panel();
+            lblScreenDelayCaption = new Label();
+            lblScreenDelayValue = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDownLeft).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownTop).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownBottom).BeginInit();
@@ -59,7 +62,7 @@
             // pnlDisplay
             // 
             pnlDisplay.BorderStyle = BorderStyle.FixedSingle;
-            pnlDisplay.Location = new Point(12, 80);
+            pnlDisplay.Location = new Point(432, 37);
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(500, 500);
             pnlDisplay.TabIndex = 0;
@@ -69,19 +72,20 @@
             lblLeft.AutoSize = true;
             lblLeft.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             lblLeft.ForeColor = Color.Gold;
-            lblLeft.Location = new Point(25, 9);
+            lblLeft.Location = new Point(593, 22);
             lblLeft.Name = "lblLeft";
             lblLeft.Size = new Size(41, 17);
             lblLeft.TabIndex = 1;
             lblLeft.Text = "Left:";
             lblLeft.TextAlign = ContentAlignment.TopRight;
+            lblLeft.Visible = false;
             // 
             // btnRun
             // 
             btnRun.FlatStyle = FlatStyle.Flat;
-            btnRun.Location = new Point(314, 32);
+            btnRun.Location = new Point(825, 6);
             btnRun.Name = "btnRun";
-            btnRun.Size = new Size(138, 23);
+            btnRun.Size = new Size(107, 23);
             btnRun.TabIndex = 2;
             btnRun.Text = "RUN";
             btnRun.UseVisualStyleBackColor = false;
@@ -91,31 +95,34 @@
             numericUpDownLeft.BackColor = Color.Black;
             numericUpDownLeft.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
             numericUpDownLeft.ForeColor = Color.Gold;
-            numericUpDownLeft.Location = new Point(72, 9);
+            numericUpDownLeft.Location = new Point(640, 22);
             numericUpDownLeft.Name = "numericUpDownLeft";
-            numericUpDownLeft.Size = new Size(68, 20);
+            numericUpDownLeft.Size = new Size(46, 20);
             numericUpDownLeft.TabIndex = 3;
+            numericUpDownLeft.Visible = false;
             // 
             // numericUpDownTop
             // 
             numericUpDownTop.BackColor = Color.Black;
             numericUpDownTop.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
             numericUpDownTop.ForeColor = Color.Gold;
-            numericUpDownTop.Location = new Point(227, 9);
+            numericUpDownTop.Location = new Point(757, 22);
             numericUpDownTop.Name = "numericUpDownTop";
-            numericUpDownTop.Size = new Size(68, 20);
+            numericUpDownTop.Size = new Size(46, 20);
             numericUpDownTop.TabIndex = 5;
+            numericUpDownTop.Visible = false;
             // 
             // lblTop
             // 
             lblTop.AutoSize = true;
             lblTop.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             lblTop.ForeColor = Color.Gold;
-            lblTop.Location = new Point(168, 9);
+            lblTop.Location = new Point(710, 25);
             lblTop.Name = "lblTop";
             lblTop.Size = new Size(41, 17);
             lblTop.TabIndex = 4;
             lblTop.Text = "Top:";
+            lblTop.Visible = false;
             lblTop.Click += lblTop_Click;
             // 
             // numericUpDownBottom
@@ -123,66 +130,72 @@
             numericUpDownBottom.BackColor = Color.Black;
             numericUpDownBottom.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
             numericUpDownBottom.ForeColor = Color.Gold;
-            numericUpDownBottom.Location = new Point(227, 35);
+            numericUpDownBottom.Location = new Point(757, 51);
             numericUpDownBottom.Name = "numericUpDownBottom";
-            numericUpDownBottom.Size = new Size(68, 20);
+            numericUpDownBottom.Size = new Size(46, 20);
             numericUpDownBottom.TabIndex = 9;
             numericUpDownBottom.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            numericUpDownBottom.Visible = false;
             // 
             // lblDBottom
             // 
             lblDBottom.AutoSize = true;
             lblDBottom.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             lblDBottom.ForeColor = Color.Gold;
-            lblDBottom.Location = new Point(158, 35);
+            lblDBottom.Location = new Point(688, 51);
             lblDBottom.Name = "lblDBottom";
             lblDBottom.Size = new Size(63, 17);
             lblDBottom.TabIndex = 8;
             lblDBottom.Text = "Bottom:";
+            lblDBottom.Visible = false;
             // 
             // numericUpDownRight
             // 
             numericUpDownRight.BackColor = Color.Black;
             numericUpDownRight.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
             numericUpDownRight.ForeColor = Color.Gold;
-            numericUpDownRight.Location = new Point(72, 35);
+            numericUpDownRight.Location = new Point(640, 48);
             numericUpDownRight.Name = "numericUpDownRight";
-            numericUpDownRight.Size = new Size(68, 20);
+            numericUpDownRight.Size = new Size(46, 20);
             numericUpDownRight.TabIndex = 7;
             numericUpDownRight.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            numericUpDownRight.Visible = false;
             // 
             // lblRight
             // 
             lblRight.AutoSize = true;
             lblRight.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             lblRight.ForeColor = Color.Gold;
-            lblRight.Location = new Point(15, 35);
+            lblRight.Location = new Point(583, 48);
             lblRight.Name = "lblRight";
             lblRight.Size = new Size(51, 17);
             lblRight.TabIndex = 6;
             lblRight.Text = "Right:";
             lblRight.TextAlign = ContentAlignment.TopRight;
+            lblRight.Visible = false;
             // 
             // numericUpDownScreen
             // 
             numericUpDownScreen.BackColor = Color.Black;
             numericUpDownScreen.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
             numericUpDownScreen.ForeColor = Color.Gold;
-            numericUpDownScreen.Location = new Point(384, 9);
+            numericUpDownScreen.Location = new Point(883, 22);
             numericUpDownScreen.Name = "numericUpDownScreen";
-            numericUpDownScreen.Size = new Size(68, 20);
+            numericUpDownScreen.Size = new Size(46, 20);
             numericUpDownScreen.TabIndex = 11;
+            numericUpDownScreen.Visible = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             label1.ForeColor = Color.Gold;
-            label1.Location = new Point(314, 9);
+            label1.Location = new Point(822, 25);
             label1.Name = "label1";
             label1.Size = new Size(64, 17);
             label1.TabIndex = 10;
             label1.Text = "Screen:";
+            label1.Visible = false;
             // 
             // tmrUI
             // 
@@ -190,12 +203,48 @@
             tmrUI.Interval = 50;
             tmrUI.Tick += tmrUI_Tick;
             // 
+            // pnlPlayers
+            // 
+            pnlPlayers.BorderStyle = BorderStyle.FixedSingle;
+            pnlPlayers.Location = new Point(12, 37);
+            pnlPlayers.Name = "pnlPlayers";
+            pnlPlayers.Size = new Size(400, 544);
+            pnlPlayers.TabIndex = 1;
+            pnlPlayers.Paint += panel1_Paint;
+            // 
+            // lblScreenDelayCaption
+            // 
+            lblScreenDelayCaption.AutoSize = true;
+            lblScreenDelayCaption.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            lblScreenDelayCaption.ForeColor = Color.Gold;
+            lblScreenDelayCaption.Location = new Point(12, 9);
+            lblScreenDelayCaption.Name = "lblScreenDelayCaption";
+            lblScreenDelayCaption.Size = new Size(101, 17);
+            lblScreenDelayCaption.TabIndex = 12;
+            lblScreenDelayCaption.Text = "screen delay";
+            lblScreenDelayCaption.TextAlign = ContentAlignment.TopRight;
+            // 
+            // lblScreenDelayValue
+            // 
+            lblScreenDelayValue.AutoSize = true;
+            lblScreenDelayValue.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            lblScreenDelayValue.ForeColor = Color.Gold;
+            lblScreenDelayValue.Location = new Point(119, 9);
+            lblScreenDelayValue.Name = "lblScreenDelayValue";
+            lblScreenDelayValue.Size = new Size(101, 17);
+            lblScreenDelayValue.TabIndex = 13;
+            lblScreenDelayValue.Text = "screen delay";
+            lblScreenDelayValue.TextAlign = ContentAlignment.TopRight;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(524, 593);
+            ClientSize = new Size(944, 637);
+            Controls.Add(lblScreenDelayValue);
+            Controls.Add(lblScreenDelayCaption);
+            Controls.Add(pnlPlayers);
             Controls.Add(numericUpDownScreen);
             Controls.Add(label1);
             Controls.Add(numericUpDownBottom);
@@ -238,5 +287,8 @@
         private NumericUpDown numericUpDownScreen;
         private Label label1;
         private System.Windows.Forms.Timer tmrUI;
+        private Panel pnlPlayers;
+        private Label lblScreenDelayCaption;
+        private Label lblScreenDelayValue;
     }
 }

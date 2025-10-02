@@ -23,9 +23,11 @@ namespace Dota2Helper.WinFormApp
             _inputControllers = new List<IInputController>();
 
             MapEnlargerModel = new MapEnlargerModel();
+            HerosStatisticsModel = new HerosStatisticsModel();
         }
 
         public MapEnlargerModel MapEnlargerModel { get; }
+        public HerosStatisticsModel HerosStatisticsModel { get; }
 
         public void AddRange(IReadOnlyList<IViewModelObserver> viewModelObservers)
         {
