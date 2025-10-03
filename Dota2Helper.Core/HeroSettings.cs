@@ -22,6 +22,9 @@ namespace Dota2Helper.Core
         [JsonPropertyName("primary_attr")]
         public PrimaryAttrEnum PrimaryAttr { get; set; }
 
+        [JsonPropertyName("roles")]
+        public string[] Roles { get; set; }
+
         [JsonPropertyName("strength_base")]
         public double StrengthBase { get; set; }
 
@@ -92,5 +95,31 @@ namespace Dota2Helper.Core
 
         [JsonPropertyName("movement_speed")]
         public double MovementSpeed { get; set; }
+
+        public int[] GetRoleIndexes()
+        {
+            if (Roles == null) return new int[0];
+
+            var result = new List<int>();
+
+            var roleIndexNames = new Dictionary<string, int>
+            {
+                { "Carry",      1 },
+                { "Support",    2 },
+                { "Disabler",   3 },
+                { "Escape",     4 },
+                { "Nuker",      5 },
+            };
+
+            foreach (var indexName in roleIndexNames)
+            {
+                if(Roles.Any(x => indexName.Key.Equals(x, StringComparison.InvariantCultureIgnoreCase)))
+                {
+                    result.Add(indexName.Value);
+                }
+            }
+
+            return result.ToArray();
+        }
     }
 }

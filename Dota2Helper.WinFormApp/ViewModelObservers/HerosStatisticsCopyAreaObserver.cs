@@ -7,24 +7,41 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
         private readonly HerosStatisticsModel _model;
         private readonly Panel _targetDrawPanel;
         private readonly Label _lastScreenshotCreatedAtValue;
+        private readonly RichTextBox[] _heroTextBoxNames;
+        private readonly Label[] _heroStatLabels;
 
         public HerosStatisticsCopyAreaObserver(
             HerosStatisticsModel model,
             Panel targetDrawPanel,
-            Label lastScreenshotCreatedAtValue)
+            Label lastScreenshotCreatedAtValue,
+            RichTextBox[] heroTextBoxNames,
+            Label[] heroStatLabels)
         {
             _model = model ?? throw new ArgumentNullException(nameof(model));
             _targetDrawPanel = targetDrawPanel ?? throw new ArgumentNullException(nameof(targetDrawPanel));
             _lastScreenshotCreatedAtValue = lastScreenshotCreatedAtValue ?? throw new ArgumentNullException(nameof(lastScreenshotCreatedAtValue));
+            _heroTextBoxNames = heroTextBoxNames ?? throw new ArgumentNullException(nameof(heroTextBoxNames));
+            _heroStatLabels = heroStatLabels ?? throw new ArgumentNullException(nameof(heroStatLabels));
         }
 
         public void UpdateView()
         {
+            UpdateHeroesScreenshot();
+            UpdateDelayTime(); 
+            UpdateHeroStats();
+        }
+
+        private void UpdateDelayTime()
+        {
             var delay = DateTimeOffset.UtcNow.Subtract(_model.LastScreenshotCreatedAt);
 
             _lastScreenshotCreatedAtValue.Text = $"-{delay.ToString(@"mm\:ss")}";
+        }
 
+        private void UpdateHeroesScreenshot()
+        {
             if (!_model.CanUpdateScreenshot) return;
+
             _model.LastScreenshotCreatedAt = DateTimeOffset.UtcNow;
 
             Rectangle bounds = new Rectangle(
@@ -89,6 +106,37 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
                         GraphicsUnit.Pixel);
                 }
             }
+        }
+
+        private void UpdateHeroStats()
+        {
+            for(int i = 0; i < _model.Heroes.Length; ++i)
+            {
+                var hero = _model.Heroes[i];
+
+                if (hero == null)
+                {
+                    SetText(_heroTextBoxNames[i], "NONE");
+                    SetText(_heroStatLabels[i], "");
+                    continue;
+                }
+
+                SetText(_heroTextBoxNames[i], hero.Name);
+                SetText(_heroStatLabels[i], $"{hero.PrimaryAttr.ToString()}\nroles: {string.Join(",", hero.GetRoleIndexes())}");
+            }
+        }
+
+        private void SetText(RichTextBox richTextBox, string newText)
+        {
+            if (richTextBox.Focused) return;
+            if (richTextBox.Text == newText) return;
+            richTextBox.Text = newText;
+        }
+
+        private void SetText(Label label, string newText)
+        {
+            if (label.Text == newText) return;
+            label.Text = newText;
         }
     }
 }

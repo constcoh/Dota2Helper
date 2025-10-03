@@ -9,7 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+	  <PackageReference Include="Tesseract" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Dota2Helper.Core\Dota2Helper.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="heroes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="source-best\eng.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="source-best\rus.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
