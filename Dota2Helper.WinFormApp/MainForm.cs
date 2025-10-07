@@ -50,6 +50,7 @@ namespace Dota2Helper.WinFormApp
                     pnlDisplay),
                 new HerosStatisticsCopyAreaObserver(
                     RootViewModel.Instance.HerosStatisticsModel,
+                    this,
                     pnlPlayers,
                     lblScreenDelayValue,
                     new[]

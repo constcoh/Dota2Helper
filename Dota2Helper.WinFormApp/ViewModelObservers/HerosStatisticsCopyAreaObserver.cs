@@ -1,10 +1,16 @@
-﻿using Dota2Helper.WinFormApp.Models;
+﻿using Dota2Helper.Core;
+using Dota2Helper.WinFormApp.Models;
+using Dota2Helper.WinFormApp.ui_images;
+using System.Drawing;
 
 namespace Dota2Helper.WinFormApp.ViewModelObservers
 {
     public class HerosStatisticsCopyAreaObserver : IViewModelObserver
     {
+        private readonly Dictionary<(int, int), PrimaryAttrEnum> _drawnAttr = new Dictionary<(int, int), PrimaryAttrEnum>();
+
         private readonly HerosStatisticsModel _model;
+        private readonly Form _form;
         private readonly Panel _targetDrawPanel;
         private readonly Label _lastScreenshotCreatedAtValue;
         private readonly RichTextBox[] _heroTextBoxNames;
@@ -12,12 +18,14 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
 
         public HerosStatisticsCopyAreaObserver(
             HerosStatisticsModel model,
+            Form form,
             Panel targetDrawPanel,
             Label lastScreenshotCreatedAtValue,
             RichTextBox[] heroTextBoxNames,
             Label[] heroStatLabels)
         {
             _model = model ?? throw new ArgumentNullException(nameof(model));
+            _form = form ?? throw new ArgumentNullException(nameof(form));
             _targetDrawPanel = targetDrawPanel ?? throw new ArgumentNullException(nameof(targetDrawPanel));
             _lastScreenshotCreatedAtValue = lastScreenshotCreatedAtValue ?? throw new ArgumentNullException(nameof(lastScreenshotCreatedAtValue));
             _heroTextBoxNames = heroTextBoxNames ?? throw new ArgumentNullException(nameof(heroTextBoxNames));
@@ -117,12 +125,37 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
                 if (hero == null)
                 {
                     SetText(_heroTextBoxNames[i], "NONE");
+                    DrawAttr(PrimaryAttrEnum.Unknown, _heroTextBoxNames[i].Left - 20, _heroTextBoxNames[i].Top);
                     SetText(_heroStatLabels[i], "");
                     continue;
                 }
 
-                SetText(_heroTextBoxNames[i], hero.Name);
-                SetText(_heroStatLabels[i], $"{hero.PrimaryAttr.ToString()}\nroles: {string.Join(",", hero.GetRoleIndexes())}");
+                SetText(_heroTextBoxNames[i], $"{hero.Name}");
+                DrawAttr(hero.PrimaryAttr, _heroTextBoxNames[i].Left - 20, _heroTextBoxNames[i].Top);
+
+                SetText(
+                    _heroStatLabels[i], 
+                    $"mov speed: {hero.MovementSpeed}\nroles: {string.Join(",", hero.GetRoleIndexes())}");
+            }
+        }
+
+        private void DrawAttr(PrimaryAttrEnum primaryAttrEnum, int left, int top)
+        {
+            if (_drawnAttr.TryGetValue((left, top), out var prev)
+                && primaryAttrEnum == prev)
+            {
+                return;
+            }
+
+            _drawnAttr[(left, top)] = primaryAttrEnum;
+
+            var uiImage = UiImages.GetFor(primaryAttrEnum);
+
+            using (Graphics g = _form.CreateGraphics())
+            {
+                var rect = new Rectangle(left, top, 16, 16);
+                g.FillEllipse(new SolidBrush(_form.BackColor), rect);
+                g.DrawImage(uiImage.Bitmap, rect);
             }
         }
 
