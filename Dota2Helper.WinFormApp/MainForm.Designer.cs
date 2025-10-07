@@ -406,7 +406,7 @@
             ForeColor = Color.Goldenrod;
             KeyPreview = true;
             Name = "MainForm";
-            Text = "dota2 helper 1.0.0";
+            Text = "dota2 helper 1.1.0-alpha";
             FormClosing += MainForm_FormClosing;
             Load += MainForm_Load;
             ResumeLayout(false);
