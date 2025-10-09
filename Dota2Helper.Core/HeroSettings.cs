@@ -69,6 +69,9 @@ namespace Dota2Helper.Core
         [JsonPropertyName("health_status")]
         public double HealthStatus { get; set; }
 
+        [JsonPropertyName("health_gain")]
+        public double HealthGain { get; set; }
+
         [JsonPropertyName("health_max")]
         public double HealthMax { get; set; }
 
@@ -79,7 +82,10 @@ namespace Dota2Helper.Core
         public double ManaMax { get; set; }
 
         [JsonPropertyName("attack_damage_max")]
-        public double attackDamageMax { get; set; }
+        public double AttackDamageMax { get; set; }
+
+        [JsonPropertyName("attack_damage_gain")]
+        public double AttackDamageGain { get; set; }
 
         [JsonPropertyName("attack_damage_lvl30_max")]
         public double AttackDamageLvl30Max { get; set; }
@@ -127,7 +133,7 @@ namespace Dota2Helper.Core
 
         public string GetProTrackerUrl()
         {
-            return $"https://dota2protracker.com/hero/{UrlName?.Replace('-', ' ')}";
+            return $"https://dota2protracker.com/hero/{UrlName?.Replace("-", "%20")}";
         }
 
         public string GetDota2Url()

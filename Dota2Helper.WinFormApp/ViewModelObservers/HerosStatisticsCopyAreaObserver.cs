@@ -1,12 +1,15 @@
 ﻿using Dota2Helper.Core;
 using Dota2Helper.WinFormApp.Models;
 using Dota2Helper.WinFormApp.ui_images;
+using System.Diagnostics;
 using System.Drawing;
 
 namespace Dota2Helper.WinFormApp.ViewModelObservers
 {
     public class HerosStatisticsCopyAreaObserver : IViewModelObserver
     {
+        public const string ChromePath = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
+
         private readonly Dictionary<(int, int), PrimaryAttrEnum> _drawnAttr = new Dictionary<(int, int), PrimaryAttrEnum>();
 
         private readonly HerosStatisticsModel _model;
@@ -15,6 +18,8 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
         private readonly Label _lastScreenshotCreatedAtValue;
         private readonly RichTextBox[] _heroTextBoxNames;
         private readonly Label[] _heroStatLabels;
+        private readonly Label[] _heroProTrackerLinks;
+        private readonly Label[] _heroDota2Links;
 
         public HerosStatisticsCopyAreaObserver(
             HerosStatisticsModel model,
@@ -22,7 +27,9 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
             Panel targetDrawPanel,
             Label lastScreenshotCreatedAtValue,
             RichTextBox[] heroTextBoxNames,
-            Label[] heroStatLabels)
+            Label[] heroStatLabels,
+            Label[] heroProTrackerLinks,
+            Label[] heroDota2Links)
         {
             _model = model ?? throw new ArgumentNullException(nameof(model));
             _form = form ?? throw new ArgumentNullException(nameof(form));
@@ -30,8 +37,16 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
             _lastScreenshotCreatedAtValue = lastScreenshotCreatedAtValue ?? throw new ArgumentNullException(nameof(lastScreenshotCreatedAtValue));
             _heroTextBoxNames = heroTextBoxNames ?? throw new ArgumentNullException(nameof(heroTextBoxNames));
             _heroStatLabels = heroStatLabels ?? throw new ArgumentNullException(nameof(heroStatLabels));
-        }
+            _heroProTrackerLinks = heroProTrackerLinks ?? throw new ArgumentNullException(nameof(heroProTrackerLinks));
+            _heroDota2Links = heroDota2Links ?? throw new ArgumentNullException(nameof(heroDota2Links));
 
+            for (int i = 0; i < 10; ++i)
+            {
+                var captured_i = i;
+                _heroProTrackerLinks[i].Click += (sender, e) => { OpenProTracherLinkForHero(captured_i); };
+                _heroDota2Links[i].Click += (sender, e) => { OpenDota2LinkForHero(captured_i); };
+            }
+        }
         public void UpdateView()
         {
             UpdateHeroesScreenshot();
@@ -135,7 +150,8 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
 
                 SetText(
                     _heroStatLabels[i], 
-                    $"mov speed: {hero.MovementSpeed}\nroles: {string.Join(",", hero.GetRoleIndexes())}");
+                    $"hl {hero.HealthStatus.Trunc()} ~ {hero.HealthMax.Trunc()} movsp: {hero.MovementSpeed}\n" +
+                    $"at {hero.AttackDamageMax.Trunc()}  ~ {hero.AttackDamageLvl30Max.Trunc()}  range: {hero.AttackRange} roles: {string.Join("", hero.GetRoleIndexes())}");
             }
         }
 
@@ -170,6 +186,20 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
         {
             if (label.Text == newText) return;
             label.Text = newText;
+        }
+
+        private void OpenProTracherLinkForHero(int i)
+        {
+            var hero = _model.Heroes[i];
+            var url = hero?.GetProTrackerUrl();
+            Process.Start(ChromePath, url);
+        }
+
+        private void OpenDota2LinkForHero(int i)
+        {
+            var hero = _model.Heroes[i];
+            var url = hero?.GetDota2Url();
+            Process.Start(ChromePath, url);
         }
     }
 }

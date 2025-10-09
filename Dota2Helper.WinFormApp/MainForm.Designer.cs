@@ -284,110 +284,110 @@
             // lblHeroStat0
             // 
             lblHeroStat0.AutoSize = true;
-            lblHeroStat0.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat0.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat0.ForeColor = Color.Gold;
             lblHeroStat0.Location = new Point(408, 84);
             lblHeroStat0.Name = "lblHeroStat0";
-            lblHeroStat0.Size = new Size(87, 30);
+            lblHeroStat0.Size = new Size(119, 32);
             lblHeroStat0.TabIndex = 56;
             lblHeroStat0.Text = "agility\r\nroles: 1,2,3,4,5";
             // 
             // lblHeroStat5
             // 
             lblHeroStat5.AutoSize = true;
-            lblHeroStat5.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat5.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat5.ForeColor = Color.Gold;
             lblHeroStat5.Location = new Point(408, 354);
             lblHeroStat5.Name = "lblHeroStat5";
-            lblHeroStat5.Size = new Size(87, 15);
+            lblHeroStat5.Size = new Size(119, 16);
             lblHeroStat5.TabIndex = 61;
             lblHeroStat5.Text = "roles: 1,2,3,4,5";
             // 
             // lblHeroStat6
             // 
             lblHeroStat6.AutoSize = true;
-            lblHeroStat6.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat6.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat6.ForeColor = Color.Gold;
             lblHeroStat6.Location = new Point(408, 406);
             lblHeroStat6.Name = "lblHeroStat6";
-            lblHeroStat6.Size = new Size(87, 15);
+            lblHeroStat6.Size = new Size(119, 16);
             lblHeroStat6.TabIndex = 62;
             lblHeroStat6.Text = "roles: 1,2,3,4,5";
             // 
             // lblHeroStat7
             // 
             lblHeroStat7.AutoSize = true;
-            lblHeroStat7.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat7.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat7.ForeColor = Color.Gold;
             lblHeroStat7.Location = new Point(408, 455);
             lblHeroStat7.Name = "lblHeroStat7";
-            lblHeroStat7.Size = new Size(87, 15);
+            lblHeroStat7.Size = new Size(119, 16);
             lblHeroStat7.TabIndex = 63;
             lblHeroStat7.Text = "roles: 1,2,3,4,5";
             // 
             // lblHeroStat8
             // 
             lblHeroStat8.AutoSize = true;
-            lblHeroStat8.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat8.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat8.ForeColor = Color.Gold;
             lblHeroStat8.Location = new Point(408, 504);
             lblHeroStat8.Name = "lblHeroStat8";
-            lblHeroStat8.Size = new Size(87, 15);
+            lblHeroStat8.Size = new Size(119, 16);
             lblHeroStat8.TabIndex = 64;
             lblHeroStat8.Text = "roles: 1,2,3,4,5";
             // 
             // lblHeroStat9
             // 
             lblHeroStat9.AutoSize = true;
-            lblHeroStat9.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat9.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat9.ForeColor = Color.Gold;
             lblHeroStat9.Location = new Point(408, 557);
             lblHeroStat9.Name = "lblHeroStat9";
-            lblHeroStat9.Size = new Size(87, 15);
+            lblHeroStat9.Size = new Size(119, 16);
             lblHeroStat9.TabIndex = 65;
             lblHeroStat9.Text = "roles: 1,2,3,4,5";
             // 
             // lblHeroStat4
             // 
             lblHeroStat4.AutoSize = true;
-            lblHeroStat4.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat4.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat4.ForeColor = Color.Gold;
             lblHeroStat4.Location = new Point(408, 287);
             lblHeroStat4.Name = "lblHeroStat4";
-            lblHeroStat4.Size = new Size(87, 15);
+            lblHeroStat4.Size = new Size(119, 16);
             lblHeroStat4.TabIndex = 60;
             lblHeroStat4.Text = "roles: 1,2,3,4,5";
             // 
             // lblHeroStat3
             // 
             lblHeroStat3.AutoSize = true;
-            lblHeroStat3.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat3.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat3.ForeColor = Color.Gold;
             lblHeroStat3.Location = new Point(408, 234);
             lblHeroStat3.Name = "lblHeroStat3";
-            lblHeroStat3.Size = new Size(87, 15);
+            lblHeroStat3.Size = new Size(119, 16);
             lblHeroStat3.TabIndex = 59;
             lblHeroStat3.Text = "roles: 1,2,3,4,5";
             // 
             // lblHeroStat2
             // 
             lblHeroStat2.AutoSize = true;
-            lblHeroStat2.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat2.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat2.ForeColor = Color.Gold;
             lblHeroStat2.Location = new Point(408, 185);
             lblHeroStat2.Name = "lblHeroStat2";
-            lblHeroStat2.Size = new Size(87, 15);
+            lblHeroStat2.Size = new Size(119, 16);
             lblHeroStat2.TabIndex = 58;
             lblHeroStat2.Text = "roles: 1,2,3,4,5";
             // 
             // lblHeroStat1
             // 
             lblHeroStat1.AutoSize = true;
-            lblHeroStat1.Font = new Font("Microsoft Sans Serif", 9F);
+            lblHeroStat1.Font = new Font("Cascadia Mono", 9F);
             lblHeroStat1.ForeColor = Color.Gold;
             lblHeroStat1.Location = new Point(408, 136);
             lblHeroStat1.Name = "lblHeroStat1";
-            lblHeroStat1.Size = new Size(87, 15);
+            lblHeroStat1.Size = new Size(119, 16);
             lblHeroStat1.TabIndex = 57;
             lblHeroStat1.Text = "roles: 1,2,3,4,5";
             // 
@@ -402,7 +402,6 @@
             lblLinkPT_0.Size = new Size(24, 15);
             lblLinkPT_0.TabIndex = 66;
             lblLinkPT_0.Text = "PT";
-            lblLinkPT_0.Click += label1_Click;
             // 
             // lblLinkPT_1
             // 

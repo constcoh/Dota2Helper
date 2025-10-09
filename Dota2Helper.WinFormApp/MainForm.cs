@@ -79,6 +79,32 @@ namespace Dota2Helper.WinFormApp
                         lblHeroStat7,
                         lblHeroStat8,
                         lblHeroStat9,
+                    },
+                    new[]
+                    {
+                        lblLinkPT_0,
+                        lblLinkPT_1,
+                        lblLinkPT_2,
+                        lblLinkPT_3,
+                        lblLinkPT_4,
+                        lblLinkPT_5,
+                        lblLinkPT_6,
+                        lblLinkPT_7,
+                        lblLinkPT_8,
+                        lblLinkPT_9
+                    },
+                    new[]
+                    {
+                        lblLinkD2_0,
+                        lblLinkD2_1,
+                        lblLinkD2_2,
+                        lblLinkD2_3,
+                        lblLinkD2_4,
+                        lblLinkD2_5,
+                        lblLinkD2_6,
+                        lblLinkD2_7,
+                        lblLinkD2_8,
+                        lblLinkD2_9
                     })
             });
 
@@ -158,11 +184,6 @@ namespace Dota2Helper.WinFormApp
         private void richTextBoxInputHero9_Leave(object sender, EventArgs e)
         {
             RootViewModel.Instance.HerosStatisticsModel.SetHero(9, richTextBoxInputHero9.Text);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            Process.Start(@"C:\Program Files\Google\Chrome\Application\chrome.exe", "https://www.dota2.com/hero/eldertitan");
         }
     }
 }
