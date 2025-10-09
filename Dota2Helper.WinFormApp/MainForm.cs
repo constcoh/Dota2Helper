@@ -1,6 +1,7 @@
 using Dota2Helper.WinFormApp.InputControllers;
 using Dota2Helper.WinFormApp.ViewModelObservers;
 using SharpHook;
+using System.Diagnostics;
 using System.Drawing.Imaging;
 
 namespace Dota2Helper.WinFormApp
@@ -157,6 +158,11 @@ namespace Dota2Helper.WinFormApp
         private void richTextBoxInputHero9_Leave(object sender, EventArgs e)
         {
             RootViewModel.Instance.HerosStatisticsModel.SetHero(9, richTextBoxInputHero9.Text);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"C:\Program Files\Google\Chrome\Application\chrome.exe", "https://www.dota2.com/hero/eldertitan");
         }
     }
 }

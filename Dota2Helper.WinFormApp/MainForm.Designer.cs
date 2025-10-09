@@ -56,6 +56,26 @@
             lblHeroStat3 = new Label();
             lblHeroStat2 = new Label();
             lblHeroStat1 = new Label();
+            lblLinkPT_0 = new Label();
+            lblLinkPT_1 = new Label();
+            lblLinkPT_2 = new Label();
+            lblLinkPT_3 = new Label();
+            lblLinkPT_4 = new Label();
+            lblLinkPT_5 = new Label();
+            lblLinkPT_6 = new Label();
+            lblLinkPT_7 = new Label();
+            lblLinkPT_8 = new Label();
+            lblLinkPT_9 = new Label();
+            lblLinkD2_9 = new Label();
+            lblLinkD2_8 = new Label();
+            lblLinkD2_7 = new Label();
+            lblLinkD2_6 = new Label();
+            lblLinkD2_5 = new Label();
+            lblLinkD2_4 = new Label();
+            lblLinkD2_3 = new Label();
+            lblLinkD2_2 = new Label();
+            lblLinkD2_1 = new Label();
+            lblLinkD2_0 = new Label();
             SuspendLayout();
             // 
             // tmrScreenUpdate
@@ -127,7 +147,7 @@
             richTextBoxInputHero0.BorderStyle = BorderStyle.None;
             richTextBoxInputHero0.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero0.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero0.Location = new Point(431, 65);
+            richTextBoxInputHero0.Location = new Point(481, 65);
             richTextBoxInputHero0.Name = "richTextBoxInputHero0";
             richTextBoxInputHero0.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero0.Size = new Size(120, 16);
@@ -141,7 +161,7 @@
             richTextBoxInputHero1.BorderStyle = BorderStyle.None;
             richTextBoxInputHero1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero1.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero1.Location = new Point(431, 117);
+            richTextBoxInputHero1.Location = new Point(481, 117);
             richTextBoxInputHero1.Name = "richTextBoxInputHero1";
             richTextBoxInputHero1.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero1.Size = new Size(120, 16);
@@ -155,7 +175,7 @@
             richTextBoxInputHero2.BorderStyle = BorderStyle.None;
             richTextBoxInputHero2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero2.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero2.Location = new Point(431, 166);
+            richTextBoxInputHero2.Location = new Point(481, 166);
             richTextBoxInputHero2.Name = "richTextBoxInputHero2";
             richTextBoxInputHero2.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero2.Size = new Size(120, 16);
@@ -169,7 +189,7 @@
             richTextBoxInputHero3.BorderStyle = BorderStyle.None;
             richTextBoxInputHero3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero3.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero3.Location = new Point(431, 215);
+            richTextBoxInputHero3.Location = new Point(481, 215);
             richTextBoxInputHero3.Name = "richTextBoxInputHero3";
             richTextBoxInputHero3.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero3.Size = new Size(120, 16);
@@ -183,7 +203,7 @@
             richTextBoxInputHero4.BorderStyle = BorderStyle.None;
             richTextBoxInputHero4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero4.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero4.Location = new Point(431, 268);
+            richTextBoxInputHero4.Location = new Point(481, 268);
             richTextBoxInputHero4.Name = "richTextBoxInputHero4";
             richTextBoxInputHero4.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero4.Size = new Size(120, 16);
@@ -197,7 +217,7 @@
             richTextBoxInputHero9.BorderStyle = BorderStyle.None;
             richTextBoxInputHero9.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero9.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero9.Location = new Point(431, 538);
+            richTextBoxInputHero9.Location = new Point(481, 538);
             richTextBoxInputHero9.Name = "richTextBoxInputHero9";
             richTextBoxInputHero9.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero9.Size = new Size(120, 16);
@@ -211,7 +231,7 @@
             richTextBoxInputHero8.BorderStyle = BorderStyle.None;
             richTextBoxInputHero8.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero8.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero8.Location = new Point(431, 485);
+            richTextBoxInputHero8.Location = new Point(481, 485);
             richTextBoxInputHero8.Name = "richTextBoxInputHero8";
             richTextBoxInputHero8.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero8.Size = new Size(120, 16);
@@ -225,7 +245,7 @@
             richTextBoxInputHero7.BorderStyle = BorderStyle.None;
             richTextBoxInputHero7.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero7.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero7.Location = new Point(431, 436);
+            richTextBoxInputHero7.Location = new Point(481, 436);
             richTextBoxInputHero7.Name = "richTextBoxInputHero7";
             richTextBoxInputHero7.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero7.Size = new Size(120, 16);
@@ -239,7 +259,7 @@
             richTextBoxInputHero6.BorderStyle = BorderStyle.None;
             richTextBoxInputHero6.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero6.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero6.Location = new Point(431, 387);
+            richTextBoxInputHero6.Location = new Point(481, 387);
             richTextBoxInputHero6.Name = "richTextBoxInputHero6";
             richTextBoxInputHero6.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero6.Size = new Size(120, 16);
@@ -253,7 +273,7 @@
             richTextBoxInputHero5.BorderStyle = BorderStyle.None;
             richTextBoxInputHero5.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             richTextBoxInputHero5.ForeColor = Color.FromArgb(255, 192, 128);
-            richTextBoxInputHero5.Location = new Point(431, 335);
+            richTextBoxInputHero5.Location = new Point(481, 335);
             richTextBoxInputHero5.Name = "richTextBoxInputHero5";
             richTextBoxInputHero5.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxInputHero5.Size = new Size(120, 16);
@@ -371,12 +391,273 @@
             lblHeroStat1.TabIndex = 57;
             lblHeroStat1.Text = "roles: 1,2,3,4,5";
             // 
+            // lblLinkPT_0
+            // 
+            lblLinkPT_0.AutoSize = true;
+            lblLinkPT_0.Cursor = Cursors.Hand;
+            lblLinkPT_0.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_0.ForeColor = Color.Gold;
+            lblLinkPT_0.Location = new Point(428, 65);
+            lblLinkPT_0.Name = "lblLinkPT_0";
+            lblLinkPT_0.Size = new Size(24, 15);
+            lblLinkPT_0.TabIndex = 66;
+            lblLinkPT_0.Text = "PT";
+            lblLinkPT_0.Click += label1_Click;
+            // 
+            // lblLinkPT_1
+            // 
+            lblLinkPT_1.AutoSize = true;
+            lblLinkPT_1.Cursor = Cursors.Hand;
+            lblLinkPT_1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_1.ForeColor = Color.Gold;
+            lblLinkPT_1.Location = new Point(428, 118);
+            lblLinkPT_1.Name = "lblLinkPT_1";
+            lblLinkPT_1.Size = new Size(24, 15);
+            lblLinkPT_1.TabIndex = 67;
+            lblLinkPT_1.Text = "PT";
+            // 
+            // lblLinkPT_2
+            // 
+            lblLinkPT_2.AutoSize = true;
+            lblLinkPT_2.Cursor = Cursors.Hand;
+            lblLinkPT_2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_2.ForeColor = Color.Gold;
+            lblLinkPT_2.Location = new Point(428, 166);
+            lblLinkPT_2.Name = "lblLinkPT_2";
+            lblLinkPT_2.Size = new Size(24, 15);
+            lblLinkPT_2.TabIndex = 68;
+            lblLinkPT_2.Text = "PT";
+            // 
+            // lblLinkPT_3
+            // 
+            lblLinkPT_3.AutoSize = true;
+            lblLinkPT_3.Cursor = Cursors.Hand;
+            lblLinkPT_3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_3.ForeColor = Color.Gold;
+            lblLinkPT_3.Location = new Point(428, 215);
+            lblLinkPT_3.Name = "lblLinkPT_3";
+            lblLinkPT_3.Size = new Size(24, 15);
+            lblLinkPT_3.TabIndex = 69;
+            lblLinkPT_3.Text = "PT";
+            // 
+            // lblLinkPT_4
+            // 
+            lblLinkPT_4.AutoSize = true;
+            lblLinkPT_4.Cursor = Cursors.Hand;
+            lblLinkPT_4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_4.ForeColor = Color.Gold;
+            lblLinkPT_4.Location = new Point(428, 268);
+            lblLinkPT_4.Name = "lblLinkPT_4";
+            lblLinkPT_4.Size = new Size(24, 15);
+            lblLinkPT_4.TabIndex = 70;
+            lblLinkPT_4.Text = "PT";
+            // 
+            // lblLinkPT_5
+            // 
+            lblLinkPT_5.AutoSize = true;
+            lblLinkPT_5.Cursor = Cursors.Hand;
+            lblLinkPT_5.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_5.ForeColor = Color.Gold;
+            lblLinkPT_5.Location = new Point(428, 335);
+            lblLinkPT_5.Name = "lblLinkPT_5";
+            lblLinkPT_5.Size = new Size(24, 15);
+            lblLinkPT_5.TabIndex = 71;
+            lblLinkPT_5.Text = "PT";
+            // 
+            // lblLinkPT_6
+            // 
+            lblLinkPT_6.AutoSize = true;
+            lblLinkPT_6.Cursor = Cursors.Hand;
+            lblLinkPT_6.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_6.ForeColor = Color.Gold;
+            lblLinkPT_6.Location = new Point(428, 388);
+            lblLinkPT_6.Name = "lblLinkPT_6";
+            lblLinkPT_6.Size = new Size(24, 15);
+            lblLinkPT_6.TabIndex = 72;
+            lblLinkPT_6.Text = "PT";
+            // 
+            // lblLinkPT_7
+            // 
+            lblLinkPT_7.AutoSize = true;
+            lblLinkPT_7.Cursor = Cursors.Hand;
+            lblLinkPT_7.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_7.ForeColor = Color.Gold;
+            lblLinkPT_7.Location = new Point(428, 436);
+            lblLinkPT_7.Name = "lblLinkPT_7";
+            lblLinkPT_7.Size = new Size(24, 15);
+            lblLinkPT_7.TabIndex = 73;
+            lblLinkPT_7.Text = "PT";
+            // 
+            // lblLinkPT_8
+            // 
+            lblLinkPT_8.AutoSize = true;
+            lblLinkPT_8.Cursor = Cursors.Hand;
+            lblLinkPT_8.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_8.ForeColor = Color.Gold;
+            lblLinkPT_8.Location = new Point(428, 485);
+            lblLinkPT_8.Name = "lblLinkPT_8";
+            lblLinkPT_8.Size = new Size(24, 15);
+            lblLinkPT_8.TabIndex = 74;
+            lblLinkPT_8.Text = "PT";
+            // 
+            // lblLinkPT_9
+            // 
+            lblLinkPT_9.AutoSize = true;
+            lblLinkPT_9.Cursor = Cursors.Hand;
+            lblLinkPT_9.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkPT_9.ForeColor = Color.Gold;
+            lblLinkPT_9.Location = new Point(428, 538);
+            lblLinkPT_9.Name = "lblLinkPT_9";
+            lblLinkPT_9.Size = new Size(24, 15);
+            lblLinkPT_9.TabIndex = 75;
+            lblLinkPT_9.Text = "PT";
+            // 
+            // lblLinkD2_9
+            // 
+            lblLinkD2_9.AutoSize = true;
+            lblLinkD2_9.Cursor = Cursors.Hand;
+            lblLinkD2_9.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_9.ForeColor = Color.Gold;
+            lblLinkD2_9.Location = new Point(450, 538);
+            lblLinkD2_9.Name = "lblLinkD2_9";
+            lblLinkD2_9.Size = new Size(25, 15);
+            lblLinkD2_9.TabIndex = 85;
+            lblLinkD2_9.Text = "D2";
+            // 
+            // lblLinkD2_8
+            // 
+            lblLinkD2_8.AutoSize = true;
+            lblLinkD2_8.Cursor = Cursors.Hand;
+            lblLinkD2_8.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_8.ForeColor = Color.Gold;
+            lblLinkD2_8.Location = new Point(450, 485);
+            lblLinkD2_8.Name = "lblLinkD2_8";
+            lblLinkD2_8.Size = new Size(25, 15);
+            lblLinkD2_8.TabIndex = 84;
+            lblLinkD2_8.Text = "D2";
+            // 
+            // lblLinkD2_7
+            // 
+            lblLinkD2_7.AutoSize = true;
+            lblLinkD2_7.Cursor = Cursors.Hand;
+            lblLinkD2_7.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_7.ForeColor = Color.Gold;
+            lblLinkD2_7.Location = new Point(450, 436);
+            lblLinkD2_7.Name = "lblLinkD2_7";
+            lblLinkD2_7.Size = new Size(25, 15);
+            lblLinkD2_7.TabIndex = 83;
+            lblLinkD2_7.Text = "D2";
+            // 
+            // lblLinkD2_6
+            // 
+            lblLinkD2_6.AutoSize = true;
+            lblLinkD2_6.Cursor = Cursors.Hand;
+            lblLinkD2_6.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_6.ForeColor = Color.Gold;
+            lblLinkD2_6.Location = new Point(450, 388);
+            lblLinkD2_6.Name = "lblLinkD2_6";
+            lblLinkD2_6.Size = new Size(25, 15);
+            lblLinkD2_6.TabIndex = 82;
+            lblLinkD2_6.Text = "D2";
+            // 
+            // lblLinkD2_5
+            // 
+            lblLinkD2_5.AutoSize = true;
+            lblLinkD2_5.Cursor = Cursors.Hand;
+            lblLinkD2_5.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_5.ForeColor = Color.Gold;
+            lblLinkD2_5.Location = new Point(450, 335);
+            lblLinkD2_5.Name = "lblLinkD2_5";
+            lblLinkD2_5.Size = new Size(25, 15);
+            lblLinkD2_5.TabIndex = 81;
+            lblLinkD2_5.Text = "D2";
+            // 
+            // lblLinkD2_4
+            // 
+            lblLinkD2_4.AutoSize = true;
+            lblLinkD2_4.Cursor = Cursors.Hand;
+            lblLinkD2_4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_4.ForeColor = Color.Gold;
+            lblLinkD2_4.Location = new Point(450, 268);
+            lblLinkD2_4.Name = "lblLinkD2_4";
+            lblLinkD2_4.Size = new Size(25, 15);
+            lblLinkD2_4.TabIndex = 80;
+            lblLinkD2_4.Text = "D2";
+            // 
+            // lblLinkD2_3
+            // 
+            lblLinkD2_3.AutoSize = true;
+            lblLinkD2_3.Cursor = Cursors.Hand;
+            lblLinkD2_3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_3.ForeColor = Color.Gold;
+            lblLinkD2_3.Location = new Point(450, 215);
+            lblLinkD2_3.Name = "lblLinkD2_3";
+            lblLinkD2_3.Size = new Size(25, 15);
+            lblLinkD2_3.TabIndex = 79;
+            lblLinkD2_3.Text = "D2";
+            // 
+            // lblLinkD2_2
+            // 
+            lblLinkD2_2.AutoSize = true;
+            lblLinkD2_2.Cursor = Cursors.Hand;
+            lblLinkD2_2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_2.ForeColor = Color.Gold;
+            lblLinkD2_2.Location = new Point(450, 166);
+            lblLinkD2_2.Name = "lblLinkD2_2";
+            lblLinkD2_2.Size = new Size(25, 15);
+            lblLinkD2_2.TabIndex = 78;
+            lblLinkD2_2.Text = "D2";
+            // 
+            // lblLinkD2_1
+            // 
+            lblLinkD2_1.AutoSize = true;
+            lblLinkD2_1.Cursor = Cursors.Hand;
+            lblLinkD2_1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_1.ForeColor = Color.Gold;
+            lblLinkD2_1.Location = new Point(450, 118);
+            lblLinkD2_1.Name = "lblLinkD2_1";
+            lblLinkD2_1.Size = new Size(25, 15);
+            lblLinkD2_1.TabIndex = 77;
+            lblLinkD2_1.Text = "D2";
+            // 
+            // lblLinkD2_0
+            // 
+            lblLinkD2_0.AutoSize = true;
+            lblLinkD2_0.Cursor = Cursors.Hand;
+            lblLinkD2_0.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold | FontStyle.Underline);
+            lblLinkD2_0.ForeColor = Color.Gold;
+            lblLinkD2_0.Location = new Point(450, 65);
+            lblLinkD2_0.Name = "lblLinkD2_0";
+            lblLinkD2_0.Size = new Size(25, 15);
+            lblLinkD2_0.TabIndex = 76;
+            lblLinkD2_0.Text = "D2";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(1191, 637);
+            Controls.Add(lblLinkD2_9);
+            Controls.Add(lblLinkD2_8);
+            Controls.Add(lblLinkD2_7);
+            Controls.Add(lblLinkD2_6);
+            Controls.Add(lblLinkD2_5);
+            Controls.Add(lblLinkD2_4);
+            Controls.Add(lblLinkD2_3);
+            Controls.Add(lblLinkD2_2);
+            Controls.Add(lblLinkD2_1);
+            Controls.Add(lblLinkD2_0);
+            Controls.Add(lblLinkPT_9);
+            Controls.Add(lblLinkPT_8);
+            Controls.Add(lblLinkPT_7);
+            Controls.Add(lblLinkPT_6);
+            Controls.Add(lblLinkPT_5);
+            Controls.Add(lblLinkPT_4);
+            Controls.Add(lblLinkPT_3);
+            Controls.Add(lblLinkPT_2);
+            Controls.Add(lblLinkPT_1);
+            Controls.Add(lblLinkPT_0);
             Controls.Add(lblHeroStat9);
             Controls.Add(lblHeroStat8);
             Controls.Add(lblHeroStat7);
@@ -442,5 +723,25 @@
         private Label lblHeroStat3;
         private Label lblHeroStat2;
         private Label lblHeroStat1;
+        private Label lblLinkPT_0;
+        private Label lblLinkPT_1;
+        private Label lblLinkPT_2;
+        private Label lblLinkPT_3;
+        private Label lblLinkPT_4;
+        private Label lblLinkPT_5;
+        private Label lblLinkPT_6;
+        private Label lblLinkPT_7;
+        private Label lblLinkPT_8;
+        private Label lblLinkPT_9;
+        private Label lblLinkD2_9;
+        private Label lblLinkD2_8;
+        private Label lblLinkD2_7;
+        private Label lblLinkD2_6;
+        private Label lblLinkD2_5;
+        private Label lblLinkD2_4;
+        private Label lblLinkD2_3;
+        private Label lblLinkD2_2;
+        private Label lblLinkD2_1;
+        private Label lblLinkD2_0;
     }
 }

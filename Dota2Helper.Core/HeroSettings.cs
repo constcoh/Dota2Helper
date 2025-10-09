@@ -18,6 +18,9 @@ namespace Dota2Helper.Core
             private set; 
         }
 
+        [JsonPropertyName("url_name")]
+        public string UrlName { get; set; }
+
 
         [JsonPropertyName("primary_attr")]
         public PrimaryAttrEnum PrimaryAttr { get; set; }
@@ -120,6 +123,16 @@ namespace Dota2Helper.Core
             }
 
             return result.ToArray();
+        }
+
+        public string GetProTrackerUrl()
+        {
+            return $"https://dota2protracker.com/hero/{UrlName?.Replace('-', ' ')}";
+        }
+
+        public string GetDota2Url()
+        {
+            return $"https://www.dota2.com/hero/{UrlName?.Replace("-", "")}";
         }
     }
 }

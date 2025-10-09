@@ -125,13 +125,13 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
                 if (hero == null)
                 {
                     SetText(_heroTextBoxNames[i], "NONE");
-                    DrawAttr(PrimaryAttrEnum.Unknown, _heroTextBoxNames[i].Left - 20, _heroTextBoxNames[i].Top);
+                    DrawAttr(PrimaryAttrEnum.Unknown, _heroTextBoxNames[i].Left - 70, _heroTextBoxNames[i].Top);
                     SetText(_heroStatLabels[i], "");
                     continue;
                 }
 
                 SetText(_heroTextBoxNames[i], $"{hero.Name}");
-                DrawAttr(hero.PrimaryAttr, _heroTextBoxNames[i].Left - 20, _heroTextBoxNames[i].Top);
+                DrawAttr(hero.PrimaryAttr, _heroTextBoxNames[i].Left - 70, _heroTextBoxNames[i].Top);
 
                 SetText(
                     _heroStatLabels[i], 
