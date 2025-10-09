@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            tmrScreenUpdate = new System.Windows.Forms.Timer(components);
             pnlDisplay = new Panel();
             btnRun = new Button();
             tmrUI = new System.Windows.Forms.Timer(components);
@@ -77,12 +76,6 @@
             lblLinkD2_1 = new Label();
             lblLinkD2_0 = new Label();
             SuspendLayout();
-            // 
-            // tmrScreenUpdate
-            // 
-            tmrScreenUpdate.Enabled = true;
-            tmrScreenUpdate.Interval = 50;
-            tmrScreenUpdate.Tick += tmrScreenUpdate_Tick;
             // 
             // pnlDisplay
             // 
@@ -686,7 +679,7 @@
             ForeColor = Color.Goldenrod;
             KeyPreview = true;
             Name = "MainForm";
-            Text = "dota2 helper 1.1.0-alpha";
+            Text = "dota2 helper 1.1.0";
             FormClosing += MainForm_FormClosing;
             Load += MainForm_Load;
             ResumeLayout(false);
@@ -694,8 +687,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer tmrScreenUpdate;
         private Panel pnlDisplay;
         private Button btnRun;
         private System.Windows.Forms.Timer tmrUI;
