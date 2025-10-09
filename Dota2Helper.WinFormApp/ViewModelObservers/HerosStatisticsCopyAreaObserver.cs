@@ -150,8 +150,8 @@ namespace Dota2Helper.WinFormApp.ViewModelObservers
 
                 SetText(
                     _heroStatLabels[i], 
-                    $"hl {hero.HealthStatus.Trunc()} ~ {hero.HealthMax.Trunc()} movsp: {hero.MovementSpeed}\n" +
-                    $"at {hero.AttackDamageMax.Trunc()}  ~ {hero.AttackDamageLvl30Max.Trunc()}  range: {hero.AttackRange} roles: {string.Join("", hero.GetRoleIndexes())}");
+                    $"hl {hero.HealthStatus.Trunc()} ~ {hero.HealthMax.Trunc()} movsp: {hero.MovementSpeed} roles: {string.Join("", hero.GetRoleIndexes())}\n" +
+                    $"at {hero.AttackDamageMax.Trunc()}  ~ {hero.AttackDamageLvl30Max.Trunc()}  range: {hero.AttackRange} speed: {hero.AttackSpeed.Trunc()}");
             }
         }
 

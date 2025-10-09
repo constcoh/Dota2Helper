@@ -93,6 +93,9 @@ namespace Dota2Helper.Core
         [JsonPropertyName("attack_range")]
         public double AttackRange { get; set; }
 
+        [JsonPropertyName("attack_speed")]
+        public double AttackSpeed { get; set; }
+
         [JsonPropertyName("armor")]
         public double Armor { get; set; }
 
